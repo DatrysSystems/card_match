@@ -11,11 +11,11 @@ use strict;
 use card_deck;
 no warnings 'all';
 
-&readArg();
+&_readArg();
 
 #-------------------------------------------------------------#
 
-sub readArg {
+sub _readArg {
 	my ($num, $mode);
 	do {
 		print("Enter number of decks [integer] > ");
@@ -101,7 +101,7 @@ sub _play {
 	 my $size2 = scalar @playerTwoTot;
 
 	 if ( $size1 > $size2 ) {
-	 	print "\nPLAYER 1 WINS! [$size1] (player 2 left with $size2 cards)\n";
+		 print "\nPLAYER 1 WINS! [$size1] (player 2 left with $size2 cards)\n";
 	 }
 	 elsif ( $size1 < $size2 ) {
 	  print "\nPLAYER 2 WINS! [$size2] (player 1 left with $size1 cards)\n";
